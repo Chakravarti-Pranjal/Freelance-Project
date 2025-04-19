@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 justify-center gap-8 items-center mt-10 md:mt-28">
           <div className="space-y-6 md:pr-8">
             <h1 className="text-4xl md:text-5xl lg:text-[65px] font-bold leading-tight">
-              Recrutement Agency in Delhi
+              Recruitment Agency in Delhi
             </h1>
            
             <div className="flex flex-col sm:flex-row gap-4">
