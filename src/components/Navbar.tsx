@@ -25,25 +25,25 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 ${
-        isScrolled ? 'bg-white shadow-md ' : 'bg-transparent '
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 py-4 ${
+        isScrolled ? 'bg-white shadow-md ' : 'bg-white '
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className={`text-2xl font-bold ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-              <span className={`${isScrolled ? "text-primary-900": "text-white"}`}>NLB</span> Services
+            <div className="text-2xl font-bold text-primary-700">
+              <span className="text-primary-900">LO</span>GO
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className={`${isScrolled ? "text-gray-800" : "text-white"} hover:text-primary-700 font-medium`}>
+            <Link href="/" className="text-gray-800 hover:text-primary-700 font-medium">
               Home
             </Link>
             <div className="relative group">
-              <button className={`flex items-center hover:text-primary-700 font-medium ${isScrolled ? "text-gray-800" : "text-white"}`}>
+              <button className="flex items-center text-gray-800 hover:text-primary-700 font-medium">
                 Services <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transform scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 origin-top-left z-50">
@@ -67,16 +67,16 @@ const Navbar: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <Link href="/industries" className={` hover:text-primary-700 font-medium ${isScrolled ? "text-gray-800" : "text-white"}`}>
+            <Link href="/industries" className="text-gray-800 hover:text-primary-700 font-medium">
               Industries
             </Link>
-            <Link href="/about" className={` hover:text-primary-700 font-medium ${isScrolled ? "text-gray-800" : "text-white"}`}>
+            <Link href="/about" className="text-gray-800 hover:text-primary-700 font-medium">
               About Us
             </Link>
-            <Link href="/jobs" className={` hover:text-primary-700 font-medium ${isScrolled ? "text-gray-800" : "text-white"}`}>
+            <Link href="/jobs" className="text-gray-800 hover:text-primary-700 font-medium">
               Jobs
             </Link>
-            <Link href="/contact" className={` hover:text-primary-700 font-medium ${isScrolled ? "text-gray-800" : "text-white"}`}>
+            <Link href="/contact" className="text-gray-800 hover:text-primary-700 font-medium">
               Contact
             </Link>
           </nav>

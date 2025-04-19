@@ -9,7 +9,7 @@ interface ReasonCardProps {
 
 const ReasonCard: React.FC<ReasonCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-4 p-6 bg-white rounded-lg shadow-md">
+    <div className="flex flex-col lg:flex-row items-start gap-4 p-6 bg-white rounded-lg shadow-md">
       <div className="flex-shrink-0">
         <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-700">
           {icon}
