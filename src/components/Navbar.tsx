@@ -48,8 +48,8 @@ const Navbar: React.FC = () => {
             <Link to="/job" className="text-gray-800 hover:text-primary-700 font-medium">
               Job Opportunities
             </Link>
-            <Link to="/about" className="text-gray-800 hover:text-primary-700 font-medium">
-              Recruitment
+            <Link to="/submit-requirement" className="text-gray-800 hover:text-primary-700 font-medium">
+              Requirement
             </Link>
             <Link to="/submit-resume" className="text-gray-800 hover:text-primary-700 font-medium">
               Submit Resume
@@ -101,13 +101,13 @@ const Navbar: React.FC = () => {
                 Job Opportunities
               </Link>
               <Link
-                to="/about"
+                to="/submit-requirement"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
-                Recruitment
+                Requirement
               </Link>
               <Link
-                to="/jobs"
+                to="/submit-resume"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
                 Submit Resume
