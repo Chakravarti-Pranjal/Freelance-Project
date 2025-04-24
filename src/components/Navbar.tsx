@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             <Link to="/about" className="text-gray-800 hover:text-primary-700 font-medium">
               Recruitment
             </Link>
-            <Link to="/jobs" className="text-gray-800 hover:text-primary-700 font-medium">
+            <Link to="/submit-resume" className="text-gray-800 hover:text-primary-700 font-medium">
               Submit Resume
             </Link> 
           </nav>
