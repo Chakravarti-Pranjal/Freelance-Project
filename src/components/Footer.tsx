@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { Link } from './ui/Link';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -49,32 +49,32 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  Employer
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  Job Oppotunities
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
-                  Industries
+                <Link to="/industries" className="text-gray-300 hover:text-white transition-colors">
+                  Recruitment
                 </Link>
               </li>
               <li>
-                <Link href="/jobs" className="text-gray-300 hover:text-white transition-colors">
-                  Jobs
+                <Link to="/jobs" className="text-gray-300 hover:text-white transition-colors">
+                  Submit Resume
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>

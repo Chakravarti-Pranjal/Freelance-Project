@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Clock, Search, Building, Award, BarChart } from 'lucide-react';
-import { Link } from './ui/Link';
+import { Link } from 'react-router-dom';
+
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -18,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, hre
       <h3 className="text-xl font-bold mb-3 text-gray-900">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <Link
-        href={href}
+        to={href}
         className="text-primary-700 font-medium inline-flex items-center group-hover:text-primary-800"
       >
         Learn More
@@ -94,7 +95,7 @@ const Services: React.FC = () => {
 
         <div className="mt-12 text-center">
           <Link
-            href="/services"
+            to="/services"
             className="inline-flex items-center bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-md font-medium transition-colors"
           >
             View All Services

@@ -50,21 +50,21 @@ const WhyChooseUs: React.FC = () => {
                 title="Industry Expertise"
                 description="Our recruiters specialize in specific industries, ensuring deep understanding of your talent needs."
               />
-              <ReasonCard
+              {/*<ReasonCard
                 icon={<Target className="h-6 w-6" />}
                 title="Tailored Approach"
                 description="We customize our recruitment strategy to align with your unique requirements and company culture."
-              />
+              />*/}
               <ReasonCard
                 icon={<Users className="h-6 w-6" />}
                 title="Qualified Candidates"
                 description="Our rigorous screening process ensures you only interview candidates who are the right fit."
               />
-              <ReasonCard
+              {/*<ReasonCard
                 icon={<Clock className="h-6 w-6" />}
                 title="Quick Turnaround"
                 description="We understand urgency and pride ourselves on efficient recruitment cycles."
-              />
+              />*/}
             </div>
           </div>
         </div>

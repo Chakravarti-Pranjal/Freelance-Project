@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
-import { Link } from './ui/Link';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,52 +38,27 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-gray-800 hover:text-primary-700 font-medium">
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-800 hover:text-primary-700 font-medium">
               Home
             </Link>
-            <div className="relative group">
-              <button className="flex items-center text-gray-800 hover:text-primary-700 font-medium">
-                Services <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transform scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 origin-top-left z-50">
-                <Link
-                  href="/services/permanent-staffing"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700"
-                >
-                  Permanent Staffing
-                </Link>
-                <Link
-                  href="/services/contract-staffing"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700"
-                >
-                  Contract Staffing
-                </Link>
-                <Link
-                  href="/services/executive-search"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700"
-                >
-                  Executive Search
-                </Link>
-              </div>
-            </div>
-            <Link href="/industries" className="text-gray-800 hover:text-primary-700 font-medium">
-              Industries
+            <Link to="/employer" className="text-gray-800 hover:text-primary-700 font-medium">
+              Employer
+            </Link> 
+            <Link to="/job" className="text-gray-800 hover:text-primary-700 font-medium">
+              Job Opportunities
             </Link>
-            <Link href="/about" className="text-gray-800 hover:text-primary-700 font-medium">
-              About Us
+            <Link to="/about" className="text-gray-800 hover:text-primary-700 font-medium">
+              Recruitment
             </Link>
-            <Link href="/jobs" className="text-gray-800 hover:text-primary-700 font-medium">
-              Jobs
-            </Link>
-            <Link href="/contact" className="text-gray-800 hover:text-primary-700 font-medium">
-              Contact
-            </Link>
+            <Link to="/jobs" className="text-gray-800 hover:text-primary-700 font-medium">
+              Submit Resume
+            </Link> 
           </nav>
 
           <div className="hidden md:flex items-center">
             <Link
-              href="/contact"
+              to="/contact"
               className="bg-primary-700 text-white px-4 py-2 rounded-md hover:bg-primary-800 transition-colors flex items-center"
             >
               <Phone className="mr-2 h-4 w-4" />
@@ -107,62 +82,39 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-4 space-y-1 bg-white rounded-md shadow-lg mt-2">
               <Link
-                href="/"
+                to="/"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
                 Home
               </Link>
-              <div>
-                <button className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md">
-                  Services
-                </button>
-                <div className="pl-4 space-y-1">
-                  <Link
-                    href="/services/permanent-staffing"
-                    className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
-                  >
-                    Permanent Staffing
-                  </Link>
-                  <Link
-                    href="/services/contract-staffing"
-                    className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
-                  >
-                    Contract Staffing
-                  </Link>
-                  <Link
-                    href="/services/executive-search"
-                    className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
-                  >
-                    Executive Search
-                  </Link>
-                </div>
-              </div>
               <Link
-                href="/industries"
+                to="/employer"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
-                Industries
+                Employer
               </Link>
+              
               <Link
-                href="/about"
+                to="/job"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
-                About Us
+                Job Opportunities
               </Link>
               <Link
-                href="/jobs"
+                to="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
-                Jobs
+                Recruitment
               </Link>
               <Link
-                href="/contact"
+                to="/jobs"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-700 hover:bg-primary-50 rounded-md"
               >
-                Contact
+                Submit Resume
               </Link>
+              
               <Link
-                href="/contact"
+                to="/contact"
                 className="block px-3 py-2 text-base font-medium bg-primary-700 text-white rounded-md hover:bg-primary-800"
               >
                 Get in Touch

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Briefcase, MapPin, Clock, ChevronRight } from 'lucide-react';
-import { Link } from './ui/Link';
+import { Link } from 'react-router-dom';
 
 interface JobProps {
   title: string;
@@ -74,7 +74,7 @@ const JobCard: React.FC<JobProps> = ({ title, company, location, type, salary, p
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200">
         <Link
-          href={`/jobs/${title.toLowerCase().replace(/\s+/g, '-')}`}
+          to={`/jobs/${title.toLowerCase().replace(/\s+/g, '-')}`}
           className="text-primary-700 font-medium hover:text-primary-800 inline-flex items-center"
         >
           View Details
@@ -104,7 +104,7 @@ const JobListings: React.FC = () => {
 
         <div className="mt-12 text-center">
           <Link
-            href="/jobs"
+            to="/jobs"
             className="inline-flex items-center bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-md font-medium transition-colors"
           >
             View All Jobs

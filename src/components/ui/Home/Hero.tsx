@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from './ui/Link';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
            
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-[#BDD530] text-white py-3 px-8  mt-10 rounded-md font-medium transition-colors text-center"
               >
                 Consult Now

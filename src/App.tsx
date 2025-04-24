@@ -1,27 +1,21 @@
-import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Industries from './components/Industries';
-import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
-import JobListings from './components/JobListings';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Employer from './pages/Employer';
+import JobOpportunities from './pages/JobOpportunities';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Services />
-      <Industries />
-      <WhyChooseUs />
-      <Testimonials />
-      <JobListings />
-      <ContactSection />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/employer" element={<Employer />} />
+        <Route path="/job" element={<JobOpportunities />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

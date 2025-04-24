@@ -20,11 +20,11 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ icon, title, color }) => {
 
 const Industries: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16  bg-primary-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Industries We Serve</h2>
+          <p className="text-lg text-gray-100">
             We have specialized recruiters with deep industry knowledge to help you find the perfect
             talent for your specific needs.
           </p>

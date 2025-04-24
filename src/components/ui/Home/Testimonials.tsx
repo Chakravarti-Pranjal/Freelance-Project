@@ -36,7 +36,7 @@ const testimonials: TestimonialProps[] = [
   }
 ];
 
-const Testimonials: React.FC = () => {
+const Testimonials: React.FC = ({style}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
@@ -48,7 +48,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-primary-900 text-white">
+    <section className={`py-16  ${style ? style : 'bg-primary-900 text-white'}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
@@ -57,7 +57,7 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto text-white">
           <div className="bg-primary-800 rounded-xl p-8 md:p-10 shadow-xl">
             <div className="flex flex-row-reverse gap-8 flex-wrap md:flex-nowrap">
               <div className="w-full md:w-1/3 flex flex-col items-center">
